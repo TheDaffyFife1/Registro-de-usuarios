@@ -1,0 +1,265 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100%;
+  background: #e3f2fd;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo .menu-icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
+#formulario {
+    width: 80%;
+    margin: 90px auto 20px; /* Agregar margen superior de 90px y margen inferior de 20px */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #171616;
+    text-align: center;
+    
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el elemento select */
+select#estatus {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para las opciones dentro del select */
+select#estatus option {
+    padding: 5px;
+    background-color: #fff; /* Cambia el fondo de las opciones si es necesario */
+    color: #333; /* Cambia el color del texto de las opciones si es necesario */
+}
+
+/* Estilo cuando se enfoca el select */
+select#estatus:focus {
+    border-color: #007BFF; /* Cambia el color del borde cuando se enfoca */
+    outline: none; /* Quita el resaltado predeterminado al enfocar */
+}
+
+#historial {
+  width: 95%;
+  max-width: 1600px;
+  margin: 100px auto 20px; /* Agregar margen superior de 90px y margen inferior de 20px */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #171616; 
+  text-align: left; /* Alinear el texto a la izquierda */
+  overflow-x: auto;
+}
+
+select#area {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#historial table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#historial th,
+#historial td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+}
+
+#historial th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#historial tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+#historial tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.chart-container > div {
+  flex-grow: 1;
+  width: 500px; /* Ancho deseado para los gráficos */
+  margin-right: 20px; /* Espacio entre los gráficos */
+}
+
+/* Estilos para el elemento select */
+select#estatus {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Establece el fondo predeterminado */
+  color: black; /* Establece el color de texto predeterminado */
+}
+
+/* Estilo cuando se enfoca el select */
+select#estatus:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Estilos para las opciones dentro del select */
+select#estatus option {
+  background-color: white; /* Fondo predeterminado de las opciones */
+  color: black; /* Color de texto predeterminado de las opciones */
+}
+
+/* Establece el color de texto según el valor de la opción seleccionada */
+select#estatus option[value="activo"] {
+  background-color: green;
+  color: white;
+}
+
+select#estatus option[value="inactivo"] {
+  background-color: red;
+  color: white;
+}
